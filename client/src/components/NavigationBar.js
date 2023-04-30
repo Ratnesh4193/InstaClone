@@ -80,18 +80,9 @@ const NavigationBar =()=>{
                               <ul className="collection">
                                {
                                     userDetails.map(item=>{
-                                     return (<>
-                                                <a href={`/profile/${item._id}`}>
-                                                <div class="custom-btn btn-16 " style={{width:"90%" ,padding:"2px",display :"flex",}}>
-                                                    
-                                                    <img style={{margin:"0px 10px",width:"30px" , height:"30px" ,borderRadius:"15px"}} src={item?item.profilePic:"https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"} alt="Image"/>
-                                                    <h5 style={{fontSize:"16px",margin:"5px 5px" ,fontWeight:"1000"}}>{item.name}</h5>
-                                                    <p style={{fontSize:"13px",margin:"5px 5px"}}>{item.email}</p>
-                                                
-                                                </div>
-                                                </a>
-                                            </>
-                                            )
+                                     return <div><button type="button"  class="custom-btn btn-16 " style={{width:"90%" ,color:""}}>
+                                            <a  href={`/profile/${item._id}`}>{item.email}</a>
+                                     </button></div>
                                    })
                                 }
                                

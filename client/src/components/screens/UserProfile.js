@@ -4,7 +4,6 @@ import {userContext} from '../../App'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Link} from 'react-router-dom'
-import ModalPopUp from  ".//ModalPopUp"
 
 
 const Profile =()=>{
@@ -176,23 +175,7 @@ const Profile =()=>{
                     <div style={{display :"flex"}}>
                         <h6 style={{textAlign: "center",margin:"10px 5px"}}>{userProfile.posts.length} posts</h6>
                         <h6 style={{textAlign: "center",margin:"10px 5px"}}>{userProfile.user.followers.length} followers</h6>
-                        <div className="list-group">
-                              <ul className="collection">
-                               {
-                                  <ModalPopUp userDetails={userProfile.user.followers} />  
-                                }
-                               
-                              </ul>
-                          </div>
                         <h6 style={{textAlign: "center",margin:"10px 5px"}}>{userProfile.user.following.length} following</h6>
-                        <div className="list-group">
-                              <ul className="collection">
-                               {
-                                  <ModalPopUp userDetails={userProfile.user.following} />  
-                                }
-                               
-                              </ul>
-                          </div>
 
                     </div>
                     <div style={{textAlign: "center",margin:"10px auto"}}>

@@ -26,7 +26,6 @@ const Routing =()=>{
     useEffect(()=>{
         const user =JSON.parse( localStorage.getItem('user'))
         if(user){
-
             dispatch({type:"USER",payload:user})
         }
         else {
@@ -66,6 +65,7 @@ const Routing =()=>{
             <Route path='/reset/:token'>
                 <NewPassword/>
             </Route>
+            NewPassword
 
         </Switch>
         )
@@ -78,16 +78,13 @@ function App() {
 
 
   return (
-
     <userContext.Provider value={{state,dispatch}}>
       <BrowserRouter>
         <NavigationBar/>
         <Routing/>
       </BrowserRouter>
     </userContext.Provider>
-
-
-       
+      
   );
 }
 
